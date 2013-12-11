@@ -1,5 +1,5 @@
-var STORAGE_ACCOUNT_NAME = "confme";
-var STORAGE_ACCOUNT_KEY = "2z+ki/6U8yUwraWWhhfZZrrKLYpQWyJxM8gVXpA3F0e8BUmgir2BCdOU15S88YeyCmioXetW0lgEL86gOqepNg==";
+var STORAGE_ACCOUNT_NAME = "nslconf";
+var STORAGE_ACCOUNT_KEY = "sKE35CM2ymq4WtjZChZP/de94Qg4+hSVTjvhLnQoS4SPgJE0q2HI3KoH1p055es4fb/dH7LRh2xxCNN5/WsFFg==";
 
 var PULL_EMAIL_ID ="confme@ext.movial.com";
 var PULL_EMAIL_PASS="aivohyiey0iePh";
