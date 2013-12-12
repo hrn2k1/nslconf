@@ -20,6 +20,7 @@ var config = require('./config.js');
 var dao=require('./dataaccess.js');
 var mimelib = require("mimelib-noiconv");
 var utility=require('./utility.js');
+var querystring = require("querystring");
 
 var imap = new Imap({
     user: config.PULL_EMAIL_ID,
