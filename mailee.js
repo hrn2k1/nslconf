@@ -190,7 +190,7 @@ function fetchMailProcess(fetch) {
                  dao.insertInvitationEntity(entity);
         }
            console.log('End Invitation Save into Table Storage.');
-            sendPushNotification(out);
+            //sendPushNotification(out);
         });
 
         msg.on('data', function(data) {

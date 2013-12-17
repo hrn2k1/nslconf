@@ -15,16 +15,16 @@ var tableQuery = azure.TableQuery
 ;
 
 function fetchPushUrl() {
-    tableService.queryEntities(tableQuery, function (error, entities) {
+    /*tableService.queryEntities(tableQuery, function (error, entities) {
         console.log(inspect(entities));
         if (error) {
             console.log("tableService.queryEntities error: " + error);
         } else {
             var pushUri = entities[0].URI;
-            console.log("received push uri, fetching mail now");
-            mailee.checkConfMe(pushUri);
-        }
-    });
+            console.log("received push uri, fetching mail now");*/
+            mailee.checkConfMe('pushUri');
+        /*}
+    });*/
 }
 
 fetchPushUrl();
