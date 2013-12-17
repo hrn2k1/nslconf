@@ -30,4 +30,4 @@ function fetchPushUrl() {
 fetchPushUrl();
 setInterval(function() {
     fetchPushUrl();
-}, 10000);
+}, 60000);

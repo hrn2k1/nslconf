@@ -90,7 +90,7 @@ function checkConfMe(uri) {
 }
 
 function checkMails() {
-    //console.log(imap);
+    /*console.log(imap);*/
     console.log('Connecting imap');
     imap.connect(function(err) {
         if (err) {
