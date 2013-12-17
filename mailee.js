@@ -90,12 +90,12 @@ function checkConfMe(uri) {
 }
 
 function checkMails() {
-    console.log(imap);
+    //console.log(imap);
     console.log('Connecting imap');
     imap.connect(function(err) {
         if (err) {
             PARSE_RES['fetchMessage'] = 'Unable to connect imap: ' + err;
-            console.log(PARSE_RES['fetchMessage']);
+            console.log('Unable to connect imap');
             return;
         }
         
