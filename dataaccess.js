@@ -158,12 +158,13 @@ tableService.createTableIfNotExists(TABLE_NAME, function(error) {
 }
 function getNotification(response)
 {
+    console.log(new Date(Date.parse('2013-12-12T06:13:16.189Z')));
 	var TABLE_NAME="Invitations";	
 	var tableService = azure.createTableService(config.STORAGE_ACCOUNT_NAME, config.STORAGE_ACCOUNT_KEY);
 	var query = azure.TableQuery
     .select()
-    .from(TABLE_NAME);
-    //.where('MasterEmail eq ?',masterEmail);
+    .from(TABLE_NAME)
+    .where('Timestamp gt ?', new Date(Date.parse('2013-12-12T06:13:16.189Z')));
     var invites={"Success":"OK"};
     tableService.queryEntities(query, function(error, entities){
     if(!error){

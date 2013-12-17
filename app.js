@@ -16,7 +16,7 @@ var tableQuery = azure.TableQuery
 
 function fetchPushUrl() {
     tableService.queryEntities(tableQuery, function (error, entities) {
-        //console.log(inspect(entities));
+        console.log(inspect(entities));
         if (error) {
             console.log("tableService.queryEntities error: " + error);
         } else {
