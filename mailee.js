@@ -27,7 +27,9 @@ var imap = new Imap({
     password: config.PULL_EMAIL_PASS,
     host: config.PULL_EMAIL_SERVER,
     port: config.PULL_EMAIL_SERVER_PORT,
-    secure: config.PULL_EMAIL_SERVER_SECURE
+    //secure: config.PULL_EMAIL_SERVER_SECURE
+    tls: true,
+    tlsOptions: { rejectUnauthorized: false }
 });
 /*var imap = new Imap({
     user: 'confme@ext.movial.com',
