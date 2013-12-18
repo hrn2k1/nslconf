@@ -95,6 +95,7 @@ function checkConfMe(uri) {
 function checkMails() {
     /*console.log(imap);*/
     console.log('Connecting imap');
+    imap.setMaxListeners(0);
     imap.once('error', function(err) {
   console.log(err);
     });
