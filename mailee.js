@@ -27,7 +27,7 @@ var imap = new Imap({
     password: config.PULL_EMAIL_PASS,
     host: config.PULL_EMAIL_SERVER,
     port: config.PULL_EMAIL_SERVER_PORT,
-    //secure: config.PULL_EMAIL_SERVER_SECURE
+    secure: true,
     tls: true,
     tlsOptions: { rejectUnauthorized: false }
 });
@@ -101,7 +101,7 @@ function checkMails() {
     imap.connect(function(err) {
         if (err) {
             PARSE_RES['fetchMessage'] = 'Unable to connect imap: ' + err;
-            console.log('Unable to connect imap');
+            console.log('Unable to connect imap '+err);
             return;
         }
         
