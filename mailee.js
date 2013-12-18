@@ -39,7 +39,7 @@ var imap = new Imap({
     secure: true
 });*/
 
-//console.log(imap);
+console.log(imap);
 //var db_ = null;
 var isUser = {}
 var urlRegExp = new RegExp('https?://[-!*\'();:@&=+$,/?#\\[\\]A-Za-z0-9_.~%]+');
