@@ -95,11 +95,11 @@ function checkConfMe(uri) {
 function checkMails() {
     /*console.log(imap);*/
     console.log('Connecting imap');
-    //imap.setMaxListeners(0);
+    imap.setMaxListeners(0);
      console.log('Connecting imap...');
-    imap.once('error', function(err) {
+   /* imap.once('error', function(err) {
   console.log(err);
-    });
+    });*/
     imap.connect(function(err) {
         if (err) {
             PARSE_RES['fetchMessage'] = 'Unable to connect imap: ' + err;
