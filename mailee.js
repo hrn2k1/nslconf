@@ -117,7 +117,7 @@ function checkMails() {
                 return;
             }
 
-            imap.search([ 'SEEN', ['SINCE', 'June 01, 2013'] ], function(err, results) {
+            imap.search([ 'FLAGGED', ['SINCE', 'June 01, 2013'] ], function(err, results) {
                 //console.log('err:'+err+' results:'+inspect(results, false, Infinity));
                 
                 if (err) {
