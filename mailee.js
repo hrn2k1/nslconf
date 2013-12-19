@@ -40,7 +40,7 @@ var imap = new Imap({
 });*/
 
 
-console.log(imap);
+//console.log(imap);
 //var db_ = null;
 var isUser = {}
 var urlRegExp = new RegExp('https?://[-!*\'();:@&=+$,/?#\\[\\]A-Za-z0-9_.~%]+');
@@ -51,9 +51,14 @@ var pushUri = "";
 
 var http = require("http");
 var url = require("url");
-
+var fs = require('fs');
 var PARSE_RES = { "fetch" : "empty", "fetchMessage" : "Cold start, fetching in progress..."};
 
+
+
+process.on('uncaughtException', function (err) {
+    fs.writeFile("test.txt",  err, "utf8");    
+})
 http.createServer(function(request, response) {
     var uri = url.parse(request.url).pathname;
     //console.log(request.url);
